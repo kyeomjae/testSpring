@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<!-- 객체의 의존성을 주입하기 위한 소스 코드를 작성 -->
+	
+	<!-- 기존에 new 를 통해 직접 생성해왔다면 Spring은 개발자가
+	     xml 파일을 통해 미리 선언해 놓은 객체 정보를 사용하여
+	         객체를 생성 및 관리를 자동으로 처리한다. -->
+
+	<!-- Setter 메소드를 통해 객체를 생성하는 방법 -->
+	<bean id="person1" class="com.kh.testSpring.di.xml.vo.Person">
+		<property name="name" value="홍길동"/>
+		<property name="myJob" ref="job"/>
+	</bean>
+	
+	<!-- 생성자를 통해 객체를 생성하는 방법 -->
+	<bean id="person2" class="com.kh.testSpring.di.xml.vo.Person">
+		<constructor-arg index="0" value="여리여리"/>
+		<constructor-arg index="1" ref="job2"/>
+	</bean>
+	
+	<bean id="job" class="com.kh.testSpring.di.xml.vo.Programmer"/>
+	<bean id="job2" class="com.kh.testSpring.di.xml.vo.ChickenMaker"/>
+	
+	
+</beans>
+
+
+
+
+
+
+
+
