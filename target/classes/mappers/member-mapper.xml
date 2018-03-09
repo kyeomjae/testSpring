@@ -27,7 +27,15 @@
 	<!-- id : 외부에서 참조하기 위한 이름
 	     parameterType : 내부로 받을 객체
 	     resultType / resultMap : 쿼리 실행 후 나온 결과를 밖으로 꺼내는 객체 -->
-	     
+
+	
+		     
+	<select id="SelectList"
+	        parameterType="Member" >
+	        <!-- ? : #{ value명 } -->
+		SELECT * FROM MEMBER
+	</select>
+	
 	<select id="loginMember"
 	        parameterType="Member" 
 	        resultMap="myResultSet">

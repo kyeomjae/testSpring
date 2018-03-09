@@ -20,7 +20,9 @@ public class TestController {
 	@RequestMapping(value="myinfo.do",method=RequestMethod.GET)
 	public String testSelectOne(Model model) {
 		System.out.println("TestController 도착");
-		sampleService.selectOne("홍길동");
+		
+		//request.setAttribute("결과로 전송될 값의 이름", 결과로 전송될 값);
+		model.addAttribute("list",sampleService.selectList());
 		
 		return "home";
 	}
