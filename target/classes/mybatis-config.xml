@@ -13,14 +13,17 @@
 	<typeAliases>
 	<!-- VO / DTO 객체의 풀네임을 일반 클래스 명으로
 	         사용하기 위해 등록하는 별칭 선언 -->
-		<typeAlias type="member.model.vo.Member" alias="Member"/>
+		<!-- <typeAlias type="member.model.vo.Member" alias="Member"/>
 		<typeAlias type="notice.model.vo.Notice" alias="Notice"/>
 		<typeAlias type="board.model.vo.Board" alias="Board"/>
-		<typeAlias type="board.model.vo.BoardPage" alias="BoardPage" />
+		<typeAlias type="board.model.vo.BoardPage" alias="BoardPage" /> -->
 	</typeAliases>
 	
-	<environments default="firstDev">
-	<!-- DataBase 연결할 설정 정보들을 선언 -->
+	
+	
+	<!-- 컨넥션을 mybatis에서 spring으로 주도권이 넘어갔으므로 주석처리 -->
+	<!-- <environments default="firstDev">
+	DataBase 연결할 설정 정보들을 선언
 		<environment id="firstDev">
 			<transactionManager type="JDBC" />
 			<dataSource type="POOLED">
@@ -30,13 +33,13 @@
 				<property name="password" value="student"/>
 			</dataSource>
 		</environment>
-	</environments>
+	</environments> -->
 	
 	<mappers>
 	  <!-- DataBase에 사용되는 쿼리문장들을 담은 mapper 파일들을 등록 -->
-	  <mapper resource="mybatis/mappers/member-mapper.xml"/>
+	 <!--  <mapper resource="mybatis/mappers/member-mapper.xml"/>
 	  <mapper resource="mybatis/mappers/notice-mapper.xml"/>
-	  <mapper resource="mybatis/mappers/board-mapper.xml"/>
+	  <mapper resource="mybatis/mappers/board-mapper.xml"/> -->
 	</mappers>
 
 </configuration>
