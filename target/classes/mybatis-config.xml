@@ -13,8 +13,8 @@
 	<typeAliases>
 	<!-- VO / DTO 객체의 풀네임을 일반 클래스 명으로
 	         사용하기 위해 등록하는 별칭 선언 -->
-		<!-- <typeAlias type="member.model.vo.Member" alias="Member"/>
-		<typeAlias type="notice.model.vo.Notice" alias="Notice"/>
+		 <typeAlias type="com.kh.testSpring.sample.model.vo.Member" alias="Member"/>
+	<!--	<typeAlias type="notice.model.vo.Notice" alias="Notice"/>
 		<typeAlias type="board.model.vo.Board" alias="Board"/>
 		<typeAlias type="board.model.vo.BoardPage" alias="BoardPage" /> -->
 	</typeAliases>
@@ -37,9 +37,9 @@
 	
 	<mappers>
 	  <!-- DataBase에 사용되는 쿼리문장들을 담은 mapper 파일들을 등록 -->
-	 <!--  <mapper resource="mybatis/mappers/member-mapper.xml"/>
-	  <mapper resource="mybatis/mappers/notice-mapper.xml"/>
-	  <mapper resource="mybatis/mappers/board-mapper.xml"/> -->
+	  <mapper resource="mappers/member-mapper.xml"/>
+	 <!--  <mapper resource="mappers/notice-mapper.xml"/>
+	  <mapper resource="mappers/board-mapper.xml"/> -->
 	</mappers>
 
 </configuration>

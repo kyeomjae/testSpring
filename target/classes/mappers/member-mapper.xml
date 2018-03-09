@@ -30,8 +30,7 @@
 
 	
 		     
-	<select id="SelectList"
-	        parameterType="Member" >
+	<select id="selectList" resultMap="myResultSet">
 	        <!-- ? : #{ value명 } -->
 		SELECT * FROM MEMBER
 	</select>
